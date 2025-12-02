@@ -5,9 +5,9 @@ pipeline {
         stage('VM Node Version') {
             steps {
                 sh '''
-                    echo "==> Printing the version of Node.js"
+                    echo "Printing the version of Node.js"
                     node -v
-                    echo "==> Printing the version of NPM"
+                    echo "Printing the version of NPM"
                     npm -v
                 '''
             }
