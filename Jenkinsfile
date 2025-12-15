@@ -35,12 +35,11 @@ pipeline {
                         publishHTML([
                             allowMissing: true,
                             alwaysLinkToLastBuild: true,
-                            icon: '',
                             keepAll: true,
                             reportDir: './',
-                            reportFiles: 'index.html',
+                            reportFiles: 'dependency-check-jenkins.html',
                             reportName: 'Dependency Check HTML Report',
-                            reportTitles: 'dependency-check-jenkins.html',
+                            reportTitles: '',
                             useWrapperFileDirectly: true
                         ])
 
