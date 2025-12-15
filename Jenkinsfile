@@ -29,6 +29,21 @@ pipeline {
                             --out \'./\'
                             --format \'ALL\'
                             --prettyPrint''', odcInstallation: 'OWASP-DepCheck-10'
+                        
+                        dependencyCheckPublisher failedTotalCritical: 1, pattern: 'dependency-check-report.xml', stopBuild: true
+
+                        publishHTML([
+                            allowMissing: true,
+                            alwaysLinkToLastBuild: true,
+                            icon: '',
+                            keepAll: true,
+                            reportDir: './',
+                            reportFiles: 'index.html',
+                            reportName: 'Dependency Check HTML Report',
+                            reportTitles: 'dependency-check-jenkins.html',
+                            useWrapperFileDirectly: true
+                        ])
+
                     }
                 }        
             }
