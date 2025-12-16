@@ -24,8 +24,8 @@
     "serverless-http": "^3.2.0"
   },
   "devDependencies": {
-    "chai": "*",
-    "chai-http": "*",
-    "mocha": "*"
+    "chai": "^4.3.10",
+    "chai-http": "^4.4.0",
+    "mocha": "^10.0.0"
   }
 }
